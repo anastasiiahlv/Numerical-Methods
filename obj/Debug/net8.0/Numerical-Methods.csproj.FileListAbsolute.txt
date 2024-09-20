@@ -1,0 +1,14 @@
+C:\Users\USER\Desktop\Numerical-Methods\bin\Debug\net8.0\Numerical-Methods.exe
+C:\Users\USER\Desktop\Numerical-Methods\bin\Debug\net8.0\Numerical-Methods.deps.json
+C:\Users\USER\Desktop\Numerical-Methods\bin\Debug\net8.0\Numerical-Methods.runtimeconfig.json
+C:\Users\USER\Desktop\Numerical-Methods\bin\Debug\net8.0\Numerical-Methods.dll
+C:\Users\USER\Desktop\Numerical-Methods\bin\Debug\net8.0\Numerical-Methods.pdb
+C:\Users\USER\Desktop\Numerical-Methods\obj\Debug\net8.0\Numerical-Methods.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Desktop\Numerical-Methods\obj\Debug\net8.0\Numerical-Methods.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\Numerical-Methods\obj\Debug\net8.0\Numerical-Methods.AssemblyInfo.cs
+C:\Users\USER\Desktop\Numerical-Methods\obj\Debug\net8.0\Numerical-Methods.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\Numerical-Methods\obj\Debug\net8.0\Numerical-Methods.dll
+C:\Users\USER\Desktop\Numerical-Methods\obj\Debug\net8.0\refint\Numerical-Methods.dll
+C:\Users\USER\Desktop\Numerical-Methods\obj\Debug\net8.0\Numerical-Methods.pdb
+C:\Users\USER\Desktop\Numerical-Methods\obj\Debug\net8.0\Numerical-Methods.genruntimeconfig.cache
+C:\Users\USER\Desktop\Numerical-Methods\obj\Debug\net8.0\ref\Numerical-Methods.dll
