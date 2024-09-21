@@ -15,6 +15,7 @@ public class Program
             string? input = Console.ReadLine();
             double epsilon = 0;
 
+            // перевірку на коректність введеної точності 
             if (System.Text.RegularExpressions.Regex.IsMatch(input, @"^[0-9]+(\.[0-9]+)?[eE][+-]?[0-9]+$"))
             {
                 epsilon = double.Parse(input);
@@ -30,6 +31,7 @@ public class Program
             input = Console.ReadLine();
             double x0 = 0;
 
+            // перевірка на коректність введення початкового наближення
             if (!double.TryParse(input, out x0) || !(x0 >= -0.4 && x0 <= -0.3 || x0 >= 0.3 && x0 <= 0.4))
             {
                 Console.WriteLine("Invalid input. Please try again.");
@@ -50,6 +52,7 @@ public class Program
                 {
                     case 1:
                         Console.WriteLine(" ------------------------------------ ");
+                        // перевірка для початкового наближення
                         if (!SimpleIterationMethod.Check(x0))
                         {
                             Console.WriteLine("|ф(x0) - x0| > (1-q)*z - x0 does not meet the condition.");
@@ -64,6 +67,7 @@ public class Program
                         break;
                     case 2:
                         Console.WriteLine(" ------------------------------------ ");
+                        // перевірка для початкового наближення
                         if (!NewtonMethod.CheckInitialApproximation(x0))
                         {
                             Console.WriteLine("f(x0)*f''(x0) < 0 - x0 does not meet the condition.");

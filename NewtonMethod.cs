@@ -9,7 +9,8 @@ namespace Numerical_Methods
 {
     internal class NewtonMethod
     {
-        public static void Method(double epsilon, double x0)
+        // метод приймає на вхід введене значення точності та початкового наближення від користувача
+        public static void Method(double epsilon, double x0) 
         {
             double x_n;
             double x_n_next = x0;
@@ -22,15 +23,15 @@ namespace Numerical_Methods
             for (int i = 1; i <= 20; i++)
             {
                 x_n = x_n_next;
-                x_n_next = x_n - Func(x_n) / FuncDerivative(x_n);
+                x_n_next = x_n - Func(x_n) / FuncDerivative(x_n); // ітераційний процес
 
-                Console.WriteLine("{0,-15} {1,-20:F15} {2,-20:F15} {3,-20:E15}",
+                Console.WriteLine("{0,-15} {1,-20:F15} {2,-20:F15} {3,-20:E15}", // виводимо результат кожної ітерації
                     i,
                     x_n_next,
                     Math.Abs(x_n_next - x_n),
                     Func(x_n_next));
 
-                if (Math.Abs(x_n_next - x_n) <= epsilon && !is_result)
+                if (Math.Abs(x_n_next - x_n) <= epsilon && !is_result) // умова завершення ітераційного процесу |x_n - x_n-1| <= E
                 {
                     iterationCount = i;
                     is_result = true;
@@ -39,7 +40,7 @@ namespace Numerical_Methods
                 }
             }
 
-            if (is_result)
+            if (is_result) // виводимо результат
             {
                 Console.WriteLine("n(E) = " + N_E(epsilon));
                 Console.WriteLine("Result is found during " + iterationCount + " iteration(s)");
@@ -51,27 +52,27 @@ namespace Numerical_Methods
             }
         }
 
-        public static double Func(double x)
+        public static double Func(double x) // задана функція
         {
             return 3 * x * x - Math.Pow(Math.Cos(Math.PI*x), 2);
         }
 
-        public static double FuncDerivative(double x)
+        public static double FuncDerivative(double x) // похідна функції
         {
             return 6 * x + Math.PI * Math.Sin(2*Math.PI*x);
         }
 
-        public static double SecondFuncDeravative(double x)
+        public static double SecondFuncDeravative(double x) // друга похідна функції
         {
             return 6 + 2 * Math.PI * Math.PI * Math.Cos(2 * Math.PI * x);
         }
 
-        public static Boolean CheckInitialApproximation(double x)
+        public static Boolean CheckInitialApproximation(double x) // перевірка початкового наближення
         {
             return Func(x) * SecondFuncDeravative(x) > 0;
         }
 
-        public static Boolean CheckConvergence()
+        public static Boolean CheckConvergence() // перевірка умови на збіжність методу
         {
             double m1 = 4.25;
             double M2 = 9.97;
@@ -80,7 +81,7 @@ namespace Numerical_Methods
             return (M2 * z) / (2 * m1) < 1;
         }
 
-        public static double N_E(double e)
+        public static double N_E(double e) // для розрахунку оцінки кількості ітерацій
         {
             double m1 = 4.25;
             double M2 = 9.97;
